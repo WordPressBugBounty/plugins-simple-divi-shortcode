@@ -3,7 +3,7 @@ Contributors: creaweb2b
 Tags: Divi, Divi Modules, Divi Library, Elegant Themes, Shortcode
 Donate link: https://www.creaweb2b.com
 Requires at least: 4.0
-Tested up to: 6.5.5
+Tested up to: 6.8.1
 Requires PHP: 5.6
 Stable tag: 1.2
 License: GPLv2 or later
