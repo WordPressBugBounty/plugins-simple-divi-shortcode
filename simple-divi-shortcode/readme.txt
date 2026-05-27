@@ -3,9 +3,9 @@ Contributors: creaweb2b
 Tags: Divi, Divi Modules, Divi Library, Elegant Themes, Shortcode
 Donate link: https://www.creaweb2b.com
 Requires at least: 4.0
-Tested up to: 6.8.1
+Tested up to: 7.0
 Requires PHP: 5.6
-Stable tag: 1.2
+Stable tag: 1.2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -57,3 +57,4 @@ Activate the plugin using the "activate" button at the end of install process, o
 - 1.0 - Updated deprecated extract attribute method
 - 1.1 - Added Shortcode Colmumn inside Divi Library and Shortcode metabox inside Divi Builder
 - 1.2 - Allow direct copy from column and metabox (Thanks to Pierre Sudarovich)
+- 1.2.1 - Security fix for stored XSS vulnerability in shortcode attribute handling

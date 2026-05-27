@@ -5,7 +5,7 @@ Plugin Name: Simple Divi Shortcode
 Plugin URI:  https://www.creaweb2b.com/plugins/
 Description: Plugin creating a shortcode allowing you to embed any Divi Library item within php template or within another Divi module/section content
 Author:      Fabrice ESQUIROL - Creaweb2b
-Version:     1.2
+Version:     1.2.1
 Author URI:  https://www.creaweb2b.com
 License:     GPL2
 
@@ -57,11 +57,23 @@ function cw_shortcode_custom_column_content( $column ) {
   }
 }
 add_action( 'manage_et_pb_layout_posts_custom_column', 'cw_shortcode_custom_column_content' );
+
 // Function to show the module
 function showmodule_shortcode($atts) {
-	$atts = shortcode_atts(array('id' => ''), $atts);
-	return do_shortcode('[et_pb_section global_module="'.$atts['id'].'"][/et_pb_section]');	
+
+	$atts = shortcode_atts(array(
+		'id' => 0,
+	), $atts);
+
+	$module_id = absint($atts['id']);
+
+	if (!$module_id) {
+		return '';
+	}
+
+	return do_shortcode('[et_pb_section global_module="' . esc_attr($module_id) . '"][/et_pb_section]');
 }
+
 add_shortcode('showmodule', 'showmodule_shortcode');  
   
 function add_my_script() {
